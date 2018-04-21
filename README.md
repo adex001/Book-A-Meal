@@ -10,3 +10,14 @@ A user can perform the following:
 - Users can view their order history 
 - Users can cancel an unwanted order.
 - Logout.
+
+### Authentication: 
+Users would be authenticated and validated using JsonWebToken.
+
+### Installation
+
+- Clone the project repository.
+- Run git clone (https://github.com/adex001/Book-A-Meal.git)
+
+### Author
+Olatunbosun Adeoye
