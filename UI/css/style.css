@@ -122,6 +122,29 @@ body {
   margin-right: 70px;
   max-width: 200px;
 }
+.summary{
+  width: 100%;
+  
+}
+.summary td, .summary th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.summary tr:nth-child(even){
+  background-color: #e0eaf9;
+  }
+
+.summary tr:hover {
+  background-color: #ddd;
+  }
+
+.summary th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: darkgray;
+    color: white;
+}
 
 @media (max-width: 600px) {
   #header .container {
