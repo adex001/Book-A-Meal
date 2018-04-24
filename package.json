@@ -4,8 +4,7 @@
   "description": "A cool app that allows customers to make food orders",
   "main": "app.js",
   "scripts": {
-    
-    
+    "pretest": "eslint --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
@@ -25,6 +24,8 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-strongloop": "^2.1.0"
   }
 }
