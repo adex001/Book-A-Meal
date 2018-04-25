@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "lint": "eslint src",
-    "test": "mocha --compilers js:babel-core/register test/test.js --timeout 20000",
+    "test": "mocha --compilers js:babel-core/register test/routes/test.js --timeout 20000",
     "start": "nodemon --exec babel-node -- app.js"
   },
   "repository": {
