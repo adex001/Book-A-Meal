@@ -1,6 +1,8 @@
 # Book-A-Meal
 Book-A-Meal is an application that allows customers to make food orders and helps the food vendor know what the customers want to eat.
 
+[![Build Status](https://travis-ci.org/adex001/Book-A-Meal.svg?branch=tests)](https://travis-ci.org/adex001/Book-A-Meal)
+
 ### Key Application Features
 A user can perform the following:
 
