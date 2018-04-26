@@ -14,3 +14,5 @@ ratings:
     
 languages:
   JavaScript: true
+service_name: travis-pro
+repo_token: 3BV9Td2OzH2Lpe5kd9CcgCUcYE2kFAEIb
