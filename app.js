@@ -13,12 +13,7 @@ app.get('/', (req, res) => {
 
 
 // Calling the app
-if (!module.parent) {
-  app.listen(port, () => {
-    console.log(`App currently running on port ${port}`);
-  });
-}
-
+app.set(port, port);
 
 // Exporting the app
 module.exports = app;
