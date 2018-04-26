@@ -6,9 +6,6 @@ const expect = chai.expect;
 const api = supertest(app);
 
 describe('Routes', () => {
-  after(() => {
-    app.server.close();
-  });
   describe('index', () => {
     it('should return a 200 response', (done) => {
       api.get('/')
