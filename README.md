@@ -4,7 +4,7 @@ Book-A-Meal is an application that allows customers to make food orders and help
 [![Build Status](https://travis-ci.org/adex001/Book-A-Meal.svg?branch=models)](https://travis-ci.org/adex001/Book-A-Meal)
 [![Maintainability](https://api.codeclimate.com/v1/badges/febc42294b0cc9e79790/maintainability)](https://codeclimate.com/github/adex001/Book-A-Meal/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/febc42294b0cc9e79790/test_coverage)](https://codeclimate.com/github/adex001/Book-A-Meal/test_coverage)
-[![Coverage Status](https://coveralls.io/repos/github/adex001/Book-A-Meal/badge.svg?branch=master)](https://coveralls.io/github/adex001/Book-A-Meal?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/adex001/Book-A-Meal/badge.svg?branch=models)](https://coveralls.io/github/adex001/Book-A-Meal?branch=models)
 
 ### Key Application Features
 A user can perform the following:
