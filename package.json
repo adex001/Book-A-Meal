@@ -1,0 +1,56 @@
+{
+  "name": "book-a-meal",
+  "version": "1.0.0",
+  "description": "A cool app that allows customers to make food orders",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint src",
+    "test": "mocha --require babel-core/register test/routes/test.js --timeout 20000",
+    "start": "nodemon --exec babel-node -- app.js",
+    "cover": "istanbul cover _mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adex001/Book-A-Meal.git"
+  },
+  "keywords": [
+    "book-a-meal"
+  ],
+  "author": "Olatunbosun Adeoye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adex001/Book-A-Meal/issues"
+  },
+  "homepage": "https://github.com/adex001/Book-A-Meal#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "express": "^4.16.3",
+    "mocha": "^5.1.1",
+    "request": "^2.85.0",
+    "should": "^13.2.1",
+    "supertest": "^3.0.0",
+    "cover": "^0.2.9"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.2",
+    "coffeescript": "^2.2.4",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "istanbul": "^0.4.5",
+    "jscoverage": "^0.6.0",
+    "mocha": "^5.1.1",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nodeunit": "^0.11.2",
+    "nyc": "^11.7.1"
+  }
+}

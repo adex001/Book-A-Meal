@@ -1,0 +1,18 @@
+engines:
+  duplications:
+    enabled: false
+    config:
+      languages:
+        - javascript
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+    - server/**
+    
+languages:
+  JavaScript: true
+service_name: travis-pro
+repo_token: 3BV9Td2OzH2Lpe5kd9CcgCUcYE2kFAEIb
