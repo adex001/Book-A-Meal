@@ -1,15 +1,12 @@
 {
     "root": true,
-    "extends": "airbnb-base",
+    "extends": "airbnb",
     "env": {
         "es6": true,
         "node": true,
         "mocha": true
     },
     
-    "parserOptions": {
-        "sourceType": "module"
-    },
     "rules": {
         "one-var": 0,
         "one-var-declaration-per-line": 0,
@@ -20,12 +17,6 @@
         "curly": [
             "error",
             "multi-line"
-        ],
-        "import/no-unresolved": [
-            2,
-            {
-                "commonjs": true
-            }
         ],
         
         "require-jsdoc": [
@@ -51,10 +42,10 @@
             {
                 "VariableDeclarator": {
                     "array": false,
-                    "object": true
+                    "object": false
                 },
                 "AssignmentExpression": {
-                    "array": true,
+                    "array": false,
                     "object": false
                 }
             },
