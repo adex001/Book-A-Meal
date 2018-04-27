@@ -6,7 +6,6 @@
         "node": true,
         "mocha": true
     },
-    
     "parserOptions": {
         "sourceType": "module"
     },
@@ -27,7 +26,6 @@
                 "commonjs": true
             }
         ],
-        
         "require-jsdoc": [
             "error",
             {
@@ -62,6 +60,5 @@
                 "enforceForRenamedProperties": false
             }
         ]
-    
     }
 }

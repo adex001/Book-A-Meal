@@ -13,4 +13,11 @@ describe('Routes', () => {
         .expect(200, done);
     });
   });
+  describe('Call to api/v1/meals/', () => {
+    it('should return a 200 response', (done) => {
+      api.get('/api/v1/meals')
+        .set('Accept', 'application/json')
+        .expect(200, done);
+    });
+  });
 });
