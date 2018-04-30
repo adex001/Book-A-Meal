@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint src",
     "build": "cross-env NODE_ENV=development babel ./server/src -d ./server/dist",
-    "test": "mocha --require babel-core/register test/routes/test.js --timeout 20000",
+    "test": "mocha --expose-internals --require babel-core/register test/routes/test.js --exit --timeout 10000",
     "start": "nodemon --exec babel-node -- app.js",
     "cover": "babel-node ./node_modules/babel-istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --require ./test/routes/test.js ./test/*",
     "coveralls": "npm run cover && cat ./coverage/lcov.info | coveralls"

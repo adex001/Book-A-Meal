@@ -31,5 +31,10 @@ app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
 
+// Close the server
+
+let close = () => {
+  app.close();
+};
 // Exporting the app
 module.exports = app;
