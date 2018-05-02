@@ -25,6 +25,28 @@ const OrderController = {
         res.json('Cant update! No such orders');
       }
     });
+  },
+  createOrder: (req, res) => {
+    // Creates an order by selecting from the meal option
+
+    // dummy datas
+    const userId = 2;
+    const orders = { mealId: 1, quantity: 4 };
+    const deliveryStatus = 'pending';
+    const shippingAddress = 'Ilupeju, Lagos';
+    const orderObject = {};
+
+    orderObject.ordersId = ordersArray.length + 1;
+    orderObject.userId = userId;
+    orderObject.orders = orders;
+    orderObject.deliveryStatus = deliveryStatus;
+    orderObject.shippingAddress = shippingAddress;
+
+    // Pushes the orderObject to the ordersArray
+    ordersArray.push(orderObject);
+
+    // Displays the meal array
+    res.send(ordersArray);
   }
 };
 export default OrderController;
