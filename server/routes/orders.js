@@ -1,11 +1,10 @@
 import express from 'express';
+import OrderController from '../controller/orderController';
 
 const router = express.Router();
 
 // Router to get all meal options
-router.get('/orders', (req, res) => {
-  res.send('This gets all the orders.');
-});
+router.get('/orders', OrderController.getOrders);
 
 // Router to create a meal
 router.post('/meals', (req, res) => {
