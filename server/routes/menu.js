@@ -7,6 +7,6 @@ const router = express.Router();
 router.post('/menu', MealController.createMenu);
 
 // Router to setup a menu
-router.get('/menu/:day', MealController.getMenu);
+router.get('/menu', MealController.getMenu);
 
 module.exports = router;
