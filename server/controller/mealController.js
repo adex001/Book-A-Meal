@@ -60,6 +60,30 @@ const MealController = {
         });
       }
     });
+  },
+  deleteMeal: (req, res) => {
+    const mealId = 1;
+    // Iterates through the meal array to find the particular meal id
+    mealsArray.forEach((meal) => {
+      // Checks for the Id
+      if (mealId === meal.mealId) {
+        // Gets the index of the meal object
+        const index = mealsArray.indexOf(mealId);
+        // Delete the meal
+        mealsArray.splice(index, 1);
+        res.send({
+          success: 'true',
+          message: 'successfully deleted the meal option',
+          meal: mealsArray
+        });
+      } else {
+        res.send({
+          success: 'false',
+          message: 'cant find meal',
+          meal: mealsArray
+        });
+      }
+    });
   }
 
 };

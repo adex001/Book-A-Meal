@@ -12,8 +12,6 @@ router.post('/meals', MealController.createMealOption);
 // Router to update a meal information
 router.put('/meals/:mealsId', MealController.updateMeal);
 
-router.delete('/meals/:mealsId', (req, res) => {
-  res.send('This routes deletes a meal option');
-});
+router.delete('/meals/:mealsId', MealController.deleteMeal);
 
 module.exports = router;
