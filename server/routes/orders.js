@@ -12,9 +12,7 @@ router.post('/meals', (req, res) => {
 });
 
 // Router to update a meal information
-router.put('/orders/:ordersId', (req, res) => {
-  res.send('This routes modifies an order!');
-});
+router.put('/orders/:ordersId', OrderController.updateOrders);
 
 
 module.exports = router;
