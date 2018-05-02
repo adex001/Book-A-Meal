@@ -10,9 +10,7 @@ router.get('/meals', MealController.getAllMeals);
 router.post('/meals', MealController.createMealOption);
 
 // Router to update a meal information
-router.put('/meals/:mealsId', (req, res) => {
-  res.send('This routes updates the information of a meal option');
-});
+router.put('/meals/:mealsId', MealController.updateMeal);
 
 router.delete('/meals/:mealsId', (req, res) => {
   res.send('This routes deletes a meal option');

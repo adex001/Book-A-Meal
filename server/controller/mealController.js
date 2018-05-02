@@ -32,6 +32,34 @@ const MealController = {
       message: 'Successfully created a meal option',
       meal: mealsArray
     }); // Returns the newly added meal option
+  },
+  // Update a meal function
+  updateMeal: (req, res) => {
+    const mealId = 1;
+    // Iterate through the meals array
+    mealsArray.forEach((meal) => {
+      // Look for a particular mealId
+      if (mealId === meal.mealId) {
+        // Update the meal object
+        meal.mealTitle = '';
+        meal.mealDescription = '';
+        meal.mealPrice = 0;
+        meal.mealImage = '';
+
+        // Return a success
+        res.send({
+          success: 'true',
+          message: 'successfully updated the meal option',
+          meal: mealsArray
+        });
+      } else {
+        res.send({
+          success: 'false',
+          message: 'cannot find that id',
+          meal: mealsArray
+        });
+      }
+    });
   }
 
 };
