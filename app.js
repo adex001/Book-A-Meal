@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import mealRoutes from './server/routes/meals';
 import menuRoutes from './server/routes/menu';
 import orderRoutes from './server/routes/orders';
+import userRoutes from './server/routes/users';
 
 
 // Setting up express and major declarations
@@ -24,6 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(`${path}/`, mealRoutes);
 app.use(`${path}/`, menuRoutes);
 app.use(`${path}/`, orderRoutes);
+app.use(`${path}/`, userRoutes);
 // app.use('/api/v1', routes);
 
 app.get('*', (req, res) => {
