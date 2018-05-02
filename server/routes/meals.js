@@ -7,9 +7,7 @@ const router = express.Router();
 router.get('/meals', MealController.getAllMeals);
 
 // Router to create a meal
-router.post('/meals', (req, res) => {
-  res.send('This routes add a meals option!');
-});
+router.post('/meals', MealController.createMealOption);
 
 // Router to update a meal information
 router.put('/meals/:mealsId', (req, res) => {

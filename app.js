@@ -16,6 +16,10 @@ app.get('/', (req, res) => {
   res.send('Welcome to the homepage.');
 });
 
+// Middlewares
+app.use(bodyParser.json()); // for parsing multipart/form-data
+app.use(bodyParser.urlencoded({ extended: false }));
+
 // Using the routes modules
 app.use(`${path}/`, mealRoutes);
 app.use(`${path}/`, menuRoutes);
@@ -31,10 +35,6 @@ app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
 
-// Close the server
 
-let close = () => {
-  app.close();
-};
 // Exporting the app
 module.exports = app;

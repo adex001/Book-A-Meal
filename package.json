@@ -37,6 +37,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.18.2",
     "coffeescript": "^2.2.4",
     "coveralls": "^3.0.0",
     "cross-env": "^5.1.4",
