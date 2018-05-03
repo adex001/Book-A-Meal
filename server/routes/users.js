@@ -8,8 +8,13 @@ router.get('/users', (req, res) => {
   res.send('userController.getUsers');
 });
 
-// Router to create a user
+// Router to Register a user
 router.post('/users', userController.createUser);
+
+// Router to login a user
+router.post('login', (req, res) => {
+  res.send('Post to login route');
+});
 
 // Router to update users information
 router.put('/users/:ordersId', (req, res) => {

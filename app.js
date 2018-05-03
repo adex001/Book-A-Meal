@@ -22,9 +22,13 @@ app.use(bodyParser.json()); // for parsing multipart/form-data
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Using the routes modules
-app.use(`${path}/`, mealRoutes);
+app.use(`${path}/`, mealRoutes); // For the API's
+app.use(mealRoutes);
 app.use(`${path}/`, menuRoutes);
+app.use(menuRoutes);
 app.use(`${path}/`, orderRoutes);
+app.use(orderRoutes);
+app.use(userRoutes);
 app.use(`${path}/`, userRoutes);
 // app.use('/api/v1', routes);
 
