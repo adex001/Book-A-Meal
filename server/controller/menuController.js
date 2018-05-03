@@ -1,8 +1,9 @@
+/* eslint-disable class-methods-use-this */
 // Menu Schema definition
 import menuArray from '../model/MenuModel';
 
-const MenuController = {
-  createMenu: (req, res) => {
+class MenuController {
+  createMenu(req, res) {
     const menuId = menuArray.length + 1;
     const menuDay = '3/5/2018';
     const meals = [1, 3];
@@ -17,10 +18,11 @@ const MenuController = {
     res.send({
       success: 'true',
       message: `Successfully created menu for menuDay for ${menuDay}`,
-      menu: menuArray // Newly created menu
+      menu: menuArray, // Newly created menu
     });
-  },
-  getMenu: (req, res) => {
+  }
+
+  getMenu(req, res) {
     // To return the menu for a specific day
     const menuDay = '2/5/2018';
     // Loop through the menu array
@@ -34,17 +36,19 @@ const MenuController = {
         res.send({
           success: 'true',
           message: 'Successful',
-          todaysMenu
+          todaysMenu,
 
         });
       } else {
         res.send({
           success: 'false',
-          message: `No menu for ${menuDay}`
+          message: `No menu for ${menuDay}`,
         });
       }
     });
   }
-};
+}
 
-export default MenuController;
+// Instantiating the object
+const menuController = new MenuController();
+export default menuController;

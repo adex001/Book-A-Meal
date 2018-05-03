@@ -1,13 +1,13 @@
+/* eslint-disable class-methods-use-this */
 import ordersArray from '../model/OrdersModel';
 
-
-const OrderController = {
-  getOrders: (req, res) => {
+class OrderController {
+  getOrders(req, res) {
     res.send({
-      ordersArray
+      ordersArray,
     });
-  },
-  updateOrders: (req, res) => {
+  }
+  updateOrders(req, res) {
     // Gets the order Id
     const orderId = 1;
     // Iterates through the orders array
@@ -25,8 +25,8 @@ const OrderController = {
         res.json('Cant update! No such orders');
       }
     });
-  },
-  createOrder: (req, res) => {
+  }
+  createOrder(req, res) {
     // Creates an order by selecting from the meal option
 
     // dummy datas
@@ -48,5 +48,8 @@ const OrderController = {
     // Displays the meal array
     res.send(ordersArray);
   }
-};
-export default OrderController;
+}
+
+// Instantiating the order controller
+const orderController = new OrderController();
+export default orderController;

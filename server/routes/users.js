@@ -12,7 +12,7 @@ router.get('/users', (req, res) => {
 router.post('/users', userController.createUser);
 
 // Router to login a user
-router.post('login', (req, res) => {
+router.post('auth/login', (req, res) => {
   res.send('Post to login route');
 });
 
@@ -22,4 +22,4 @@ router.put('/users/:ordersId', (req, res) => {
 });
 
 
-module.exports = router;
+export default router;
