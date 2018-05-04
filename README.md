@@ -16,6 +16,10 @@ A user can perform the following:
 - Users can cancel an unwanted order.
 - Logout.
 
+### Development
+
+This application was developed using NodeJs with express for routing. Postgres was used for persisting data.
+
 ### Authentication: 
 Users would be authenticated and validated using JsonWebToken.
 
@@ -23,6 +27,20 @@ Users would be authenticated and validated using JsonWebToken.
 
 - Clone the project repository.
 - Run git clone (https://github.com/adex001/Book-A-Meal.git)
+``` git clone https://github.com/adex001/Book-A-Meal.git ```
+
+more info: (https://help.github.com/articles/cloning-a-repository/)
+- Run ``` npm install ``` to install the dependencies in the package.json file.
+- Create Postgresql database and run ```sequelize dbmigrate npm undo and npm redo ```(https://www.postgresql.org/)
+
+### Technologies Used
+
+- JavaScript (ES6) (http://es6-features.org/)
+- Node.js (https://nodejs.org/en/)
+- Express (https://www.npmjs.com/package/express-api)
+- React/Redux (http://redux.js.org/docs/basics/UsageWithReact.html)
+- Sequelize ORM (http://docs.sequelizejs.com/)
+- Postgres (https://www.postgresql.org/)
 
 ### Author
 Olatunbosun Adeoye
