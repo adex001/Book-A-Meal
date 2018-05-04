@@ -38,7 +38,6 @@ more info: (https://help.github.com/articles/cloning-a-repository/)
 - JavaScript (ES6) (http://es6-features.org/)
 - Node.js (https://nodejs.org/en/)
 - Express (https://www.npmjs.com/package/express-api)
-- React/Redux (http://redux.js.org/docs/basics/UsageWithReact.html)
 - Sequelize ORM (http://docs.sequelizejs.com/)
 - Postgres (https://www.postgresql.org/)
 

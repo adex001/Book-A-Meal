@@ -5,6 +5,7 @@ import mealRoutes from './server/routes/meals';
 import menuRoutes from './server/routes/menu';
 import orderRoutes from './server/routes/orders';
 import userRoutes from './server/routes/users';
+import models from './server/model';
 
 
 // Setting up express and major declarations

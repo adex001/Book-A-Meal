@@ -67,7 +67,7 @@ class MealController {
     // Iterates through the meal array to find the particular meal id
     mealsArray.forEach((meal) => {
       // Checks for the Id
-      if (mealId === meal.mealId) {
+      if (mealId !== meal.mealId) {
         // Gets the index of the meal object
         const index = mealsArray.indexOf(mealId);
         // Delete the meal

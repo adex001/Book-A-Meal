@@ -1,7 +1,7 @@
 
 // Middleware function
 
-// Exporting the middleware
+
 const verifyToken = (req, res, next) => {
   // Get the auth header value
   const headerHolder = req.headers.authorization;
@@ -21,5 +21,5 @@ const verifyToken = (req, res, next) => {
     res.sendStatus(403);
   }
 };
-
+// Exporting the middleware
 export default verifyToken;
