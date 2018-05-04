@@ -1,4 +1,5 @@
 /* eslint-disable class-methods-use-this */
+import jwt from 'jsonwebtoken';
 import userArray from '../model/usersModel';
 
 class UserController {
@@ -13,9 +14,26 @@ class UserController {
     userObject.email = email;
     userObject.password = password;
 
+    // Conditions to push the elements into persistence
+
     // Push the elements to the array
     userArray.push(userObject);
-    res.send(userArray);
+    // Creates a token object
+    jwt.sign({ userObject }, 'secretkey', (err, token) => {
+      res.json({
+        token,
+      });
+    });
+    // jwt.verify(req.token, 'secretkey', (err, myData) => {
+    //   if (err) {
+    //     res.sendStatus(403);
+    //   } else {
+    //     res.json({
+    //       message: 'New user Created!',
+    //       myData,
+    //     });
+    //   }
+    // });
   }
   deleteUser(req, res) {
     const userId = 1;
@@ -35,7 +53,7 @@ class UserController {
       } else {
         res.send({
           success: 'false',
-          message: 'cant find meal',
+          message: 'cant find user',
           user: userArray,
         });
       }
@@ -45,6 +63,28 @@ class UserController {
   // modifyUser(req, res) {
 
   // }
+  loginUser(req, res) {
+    const { username, password } = req.body;
+    // Gets the information from the user
+    if (!username || !password) {
+      res.json({
+        message: 'Username or password cannot be blank',
+      });
+    } else {
+    // Goes to the database and return a user
+    // Dummy user
+      const user = {
+        username: 'adeoye',
+        password: 'password',
+      };
+
+      jwt.sign({ user }, 'secretkey', (err, token) => {
+        res.json({
+          token,
+        });
+      });
+    }
+  }
 }
 
 const userController = new UserController();
