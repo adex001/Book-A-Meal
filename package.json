@@ -4,12 +4,11 @@
   "description": "A cool app that allows customers to make food orders",
   "main": "app.js",
   "scripts": {
-    "lint": "eslint src",
-    "test": "cross-env NODE_ENV=test nyc --reporter=html --reporter=lcov --reporter=text mocha --timeout 20000 --exit --require babel-core/register test/routes/*",
-    "start": "nodemon --exec babel-node -- app.js",
-    "cover": "babel-node ./node_modules/babel-istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --require ./test/* ./test/*",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test"
+   "start": "nodemon --exec babel-node -- app.js",
+   "test": "cross-env NODE_ENV=test && nyc --reporter=html --reporter=text mocha --timeout 20000 --exit --require babel-core/register ./test/",
+   "coverage": "nyc report --reporter=text-lcov | coveralls",
+   "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test"
+
   },
   "repository": {
     "type": "git",
