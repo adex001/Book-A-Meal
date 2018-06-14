@@ -9,4 +9,4 @@ router.post('/menu', menuController.createMenu);
 // Router to setup a menu
 router.get('/menu', menuController.getMenu);
 
-module.exports = router;
+export default router;
